@@ -10,6 +10,8 @@ gem 'bcrypt',               '3.1.7'
 
 gem 'bootstrap-sass',       '3.4.1'
 
+gem 'jquery-rails', '~> 4.3', '>= 4.3.3'
+
 # The original asset pipeline for Rails [https://github.com/rails/sprockets-rails]
 gem "sprockets-rails"
 
