@@ -170,6 +170,8 @@ GEM
     reline (0.3.1)
       io-console (~> 0.5)
     rexml (3.2.5)
+    ruby-debug-ide (0.7.3)
+      rake (>= 0.8.1)
     rubyzip (2.3.2)
     sassc (2.4.0)
       ffi (~> 1.9)
@@ -220,12 +222,14 @@ DEPENDENCIES
   bootsnap
   bootstrap-sass (= 3.4.1)
   capybara
+  debase
   debug
   importmap-rails
   jbuilder
   pg
   puma (~> 5.0)
   rails (~> 7.0.4)
+  ruby-debug-ide (~> 0.7.3)
   selenium-webdriver
   sprockets-rails
   stimulus-rails
