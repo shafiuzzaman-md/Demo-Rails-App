@@ -6,7 +6,7 @@ class User < ApplicationRecord
     #has_secure_password
     #validates :password, presence: true, length: { minimum: 6 }
 
-    has_many :posts
+    has_many :posts, dependent: :destroy
 
     validates :email, presence: true
 
