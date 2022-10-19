@@ -9,7 +9,7 @@
 </p>
 
 <p>
-  <li><%= link_to "Edit", edit_comment_path(@comment) %></li>
-    <%= link_to "delete", @comment, method: :delete,
-                                  data: { confirm: "Are you sure?" } %>
+    <li><%= link_to "Edit", edit_comment_path(@comment) %></li>
+    <li><%= link_to "Delete", @comment, method: :Delete,
+                                  data: { confirm: "Are you sure?" } %></li>
 </p>

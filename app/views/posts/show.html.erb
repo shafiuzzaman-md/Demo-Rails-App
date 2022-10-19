@@ -5,7 +5,7 @@
 <ul>
   <li><%= link_to "Edit", edit_post_path(@post) %></li>
   <li>
-    <%= link_to "delete", @post, method: :delete,
+    <%= link_to "Delete", @post, method: :delete,
                                   data: { confirm: "Are you sure?" } %>
   </li>
 </ul>
@@ -18,4 +18,19 @@
 <% end %>
 
 <h2>Add a comment:</h2>
-<%= render 'comments/form' %>
+
+<%= form_with model: [ @post, @post.comments.build ] do |form| %>
+  <div>
+    <%= form.label :commenter %><br>
+    <%= form.text_field :commenter %>
+  </div>
+
+  <div>
+    <%= form.label :body %><br>
+    <%= form.text_area :body %><br>
+  </div>
+
+  <div>
+    <%= form.submit %>
+  </div>
+<% end %>

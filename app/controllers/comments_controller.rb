@@ -26,7 +26,7 @@ class CommentsController < ApplicationController
   def destroy	
     Comment.find(params[:id]).destroy
     flash[:success] = "Comment deleted"
-    redirect_to user_path, status: :see_other
+    redirect_to root_path, status: :see_other
   end
 
   private

@@ -6,6 +6,9 @@ class UsersController < ApplicationController
 
   def show
     @user = User.find(params[:id])
+    rescue ActiveRecord::RecordNotFound
+      flash[:danger]= "User not found!"
+      redirect_to :action => 'index'
   end
 
   def new

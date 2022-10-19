@@ -1,15 +1,9 @@
+<h1><%= @user.name %> (<%= @user.email %>)</h1>
 
-<h1><%= @user.name %></h1>
+<%= link_to "<button class='btn btn-warning'>Update User Details</button>".html_safe, edit_user_path(@user) %>
 
-<p><%= @user.email %></p>
-
-<ul>
-  <li><%= link_to "Edit", edit_user_path(@user) %></li>
-  <li>
-    <%= link_to "delete", @user, method: :delete,
+<%= link_to "<button class='btn btn-danger'>Delete User</button>".html_safe, @user, method: :delete,
                                   data: { confirm: "Are you sure?" } %>
-  </li>
-</ul>
 
 <h2>Posts</h2>
 <% @user.posts.each do |post| %>
