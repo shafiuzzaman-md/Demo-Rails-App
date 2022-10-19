@@ -1,18 +1,12 @@
 <h1><%= @post.title %></h1>
 
-<p><%= @post.body %></p>
+<p><%= @post.message %></p>
 
 <ul>
   <li><%= link_to "Edit", edit_post_path(@post) %></li>
-  <li><%= link_to "Delete", post_path(@post), data: {
-                    turbo_method: :delete,
-                    turbo_confirm: "Are you sure?"
-                  } %></li>
+  <li>
+  <%= link_to "delete", @post, method: :delete,
+                                data: { confirm: "Are you sure?" } %>
+  </li>
 </ul>
-
-<h2>Comments</h2>
-<%= render @post.comments %>
-
-<h2>Add a comment:</h2>
-<%= render 'comments/form' %>
 
