@@ -5,8 +5,17 @@
 <ul>
   <li><%= link_to "Edit", edit_post_path(@post) %></li>
   <li>
-  <%= link_to "delete", @post, method: :delete,
-                                data: { confirm: "Are you sure?" } %>
+    <%= link_to "delete", @post, method: :delete,
+                                  data: { confirm: "Are you sure?" } %>
   </li>
 </ul>
 
+<h2>Comments</h2>
+<% @post.comments.each do |comment| %>
+  <p>
+    <%= link_to comment.commenter, comment %> &emsp; <%= link_to comment.body, comment %>
+  </p>
+<% end %>
+
+<h2>Add a comment:</h2>
+<%= render 'comments/form' %>

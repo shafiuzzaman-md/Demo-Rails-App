@@ -1,14 +1,15 @@
 <p>
   <strong>Commenter:</strong>
-  <%= comment.commenter %>
+  <%= @comment.commenter %>
 </p>
 
 <p>
   <strong>Comment:</strong>
-  <%= comment.body %>
+  <%= @comment.body %>
 </p>
 
 <p>
+  <li><%= link_to "Edit", edit_comment_path(@comment) %></li>
     <%= link_to "delete", @comment, method: :delete,
                                   data: { confirm: "Are you sure?" } %>
 </p>
