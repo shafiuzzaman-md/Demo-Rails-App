@@ -1,1 +1,14 @@
-<%= @user.name %>, <%= @user.email %>
+
+<h1><%= @user.name %></h1>
+
+<p><%= @user.email %></p>
+
+<ul>
+  <li><%= link_to "Edit", edit_user_path(@user) %></li>
+  <li>
+    <%= link_to "delete", @user, method: :delete,
+                                  data: { confirm: "Are you sure?" } %>
+  </li>
+
+</ul>
+
