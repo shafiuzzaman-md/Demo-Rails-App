@@ -1,6 +1,6 @@
 # README
 
-In this project I investigate how to setup a basic Ruby on Rails app. The app will be a small twitter-like app with the list of users who can create new posts and comment on the existing posts. One user will have many posts, and one post can have many comments. Each comment belongs to the user and the post.
+In this project I investigate how to setup a basic Ruby on Rails app. The app is a small twitter-like app with the list of users who can create new posts and comment on the existing posts. One user will have many posts, and one post can have many comments. Each comment belongs to the user and the post.
 
 
 ## List of supported endpoints
